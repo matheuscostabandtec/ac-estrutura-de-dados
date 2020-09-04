@@ -22,9 +22,9 @@ public class CarrinhoController {
                "e compre o que desejar! \n" +
                "- Exibir lista das compras; \n" +
                "- Comprar camisetas de time: /camisetas \n" +
-               "- Comprar chuteiras: /cuteiras \n" +
+               "- Comprar chuteiras: /chuteiras \n" +
                "- Comprar equipamentos esportivos: /equipamentos \n" +
-               "- Contratar serviço de personal trainer: /personalTrainer \n" +
+               "- Contratar serviço de personal trainer: /personalTrainers \n" +
                "- Exibir um item específico da lista: /{id} \n" +
                "- Excluir algum item do carrinho: /{id} \n" +
                "- Exibir total da compra: /total \n"
@@ -50,13 +50,13 @@ public class CarrinhoController {
         return ResponseEntity.status(201).build();
     }
 
-    @PostMapping("/equipamento")
+    @PostMapping("/equipamentos")
     public ResponseEntity comprarEquipamentoEsportivo(@RequestBody EquipamentoEsportivo eqEsportivo){
         carrinho.adicionaItemVenda(eqEsportivo);
         return  ResponseEntity.status(201).build();
     }
 
-    @PostMapping("/personalTrainer")
+    @PostMapping("/personalTrainers")
     public ResponseEntity contratarPersonal(@RequestBody PersonalTrainer personal){
         carrinho.adicionaItemVenda(personal);
         return  ResponseEntity.status(201).build();
