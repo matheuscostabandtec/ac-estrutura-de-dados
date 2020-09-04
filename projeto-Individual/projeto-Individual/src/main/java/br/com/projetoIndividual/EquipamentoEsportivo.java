@@ -5,8 +5,8 @@ public class EquipamentoEsportivo extends Itens {
     private String modalidadeEquipamento;
     private String nomeEquipamento;
 
-    public EquipamentoEsportivo(Integer codigoProduto, Integer qtdProduto, Double valorProduto, String modalidadeEquipamento, String nomeEquipamento) {
-        super(codigoProduto, qtdProduto, valorProduto);
+    public EquipamentoEsportivo(Integer codigoItem, Integer qtdItem, Double valorItem, String modalidadeEquipamento, String nomeEquipamento) {
+        super(codigoItem, qtdItem, valorItem);
         this.modalidadeEquipamento = modalidadeEquipamento;
         this.nomeEquipamento = nomeEquipamento;
     }

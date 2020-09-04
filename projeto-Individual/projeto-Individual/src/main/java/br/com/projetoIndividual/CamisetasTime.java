@@ -3,12 +3,12 @@ package br.com.projetoIndividual;
 public class CamisetasTime extends Itens {
 
     private String nomeTime;
-    private String tamanhoCamisa; // P, M, G, GG etc.
+    private String tamanhoCamiseta; // P, M, G, GG etc.
 
-    public CamisetasTime(Integer codigoProduto, Integer qtdProduto, Double valorProduto, String nomeTime, String tamanhoCamisa) {
-        super(codigoProduto, qtdProduto, valorProduto);
+    public CamisetasTime(Integer codigoItem, Integer qtdItem, Double valorItem, String nomeTime, String tamanhoCamiseta) {
+        super(codigoItem, qtdItem, valorItem);
         this.nomeTime = nomeTime;
-        this.tamanhoCamisa = tamanhoCamisa;
+        this.tamanhoCamiseta = tamanhoCamiseta;
     }
 
     @Override
@@ -20,8 +20,8 @@ public class CamisetasTime extends Itens {
         return nomeTime;
     }
 
-    public String getTamanhoCamisa() {
-        return tamanhoCamisa;
+    public String getTamanhoCamiseta() {
+        return tamanhoCamiseta;
     }
 
     @Override
@@ -30,7 +30,7 @@ public class CamisetasTime extends Itens {
                 super.toString() +
                 "\n CamisasTime: " +
                 "\n Nome do time: " + nomeTime + '\'' +
-                "\n Tamanho da camisa: " + tamanhoCamisa +
+                "\n Tamanho da camisa: " + tamanhoCamiseta +
                 "\n Valor de venda: " + String.format("R$ %.2f", getValorCompra());
     }
 }

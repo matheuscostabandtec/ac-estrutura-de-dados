@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Carrinho {
 
+
     private List<ItensVenda> carrinho;
     private Double total;
 
@@ -17,8 +18,8 @@ public class Carrinho {
         carrinho.add(item);
     }
 
-    public void excluirItemVenda(Integer codigo){
-        carrinho.remove(codigo-1);
+    public void excluirItemVenda(Integer id){
+        carrinho.remove(id - 1);
     }
 
     public void calculaTotalCompra(){
@@ -27,18 +28,16 @@ public class Carrinho {
         }
     }
 
-    public List<ItensVenda> exibeCarrinho(){
-        return carrinho;
-    }
-
-    public ItensVenda recuperarItem(Integer id){
+    public ItensVenda getItem(Integer id){
        return carrinho.get(id-1);
     }
 
     public Double getTotal() {
         return total;
     }
-
+    public List<ItensVenda> getCarrinho() {
+        return carrinho;
+    }
     public void setTotal(Double total) {
         this.total = total;
     }
