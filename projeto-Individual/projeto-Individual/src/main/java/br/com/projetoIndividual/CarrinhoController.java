@@ -45,8 +45,6 @@ public class CarrinhoController {
     @PostMapping("/chuteiras")
     public ResponseEntity comprarChuteira(@RequestBody Chuteiras chuteira){
         carrinho.adicionaItemVenda(chuteira);
-        System.out.println(chuteira.getMarcaChuteira());
-        System.out.println(chuteira.getTamanhoChuteira());
         return ResponseEntity.status(201).build();
     }
 
